@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Digit Recognizer</title>
+  <style>
+    canvas {
+      border: 1px solid #000;
+      cursor: crosshair;
+    }
+  </style>
+</head>
+<body>
+  <h1>Draw a Digit</h1>
+  <form action='http://127.0.0.1:5000/predict' method="post">
+    <canvas id="canvas" width="280" height="280"></canvas>
+    <br>
+    <button onclick="predictDigit()">Predict</button>
+  </form>  
+    <br>
+    <br>
+    <h4 style="color:Violet" id="result">
+        {{ prediction_text }}
+    </h4>
+
+  <!-- Include your JavaScript file -->
+  <script src="static/script.js"></script>
+</body>
+</html>
